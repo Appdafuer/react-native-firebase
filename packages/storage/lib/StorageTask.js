@@ -59,8 +59,6 @@ function wrapSnapshotEventListener(task, listenerFn, unsubscribe) {
         // if (!snapshot.metadata.fullPath) snapshot.metadata.fullPath = task._ref.fullPath;
       }
 
-      Object.freeze(snapshot);
-
       listenerFn(snapshot);
     }
   };
@@ -177,9 +175,7 @@ export default class StorageTask {
   on(event, nextOrObserver, error, complete) {
     if (event !== StorageStatics.TaskEvent.STATE_CHANGED) {
       throw new Error(
-        `firebase.storage.StorageTask.on event argument must be a string with a value of '${
-          StorageStatics.TaskEvent.STATE_CHANGED
-        }'`,
+        `firebase.storage.StorageTask.on event argument must be a string with a value of '${StorageStatics.TaskEvent.STATE_CHANGED}'`,
       );
     }
 

@@ -132,8 +132,6 @@ function initialiseNativeModule(module) {
     }
   }
 
-  Object.freeze(multiModuleRoot);
-
   NATIVE_MODULE_REGISTRY[key] = multiModuleRoot;
 
   return NATIVE_MODULE_REGISTRY[key];

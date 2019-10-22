@@ -51,7 +51,6 @@ describe('naturalLanguage()', () => {
         );
         e.message.should.containEql('Language Identification');
         firebase.naturalLanguage()._nativeModule.identifyLanguage = method;
-        Object.freeze(firebase.naturalLanguage()._nativeModule);
         return Promise.resolve();
       }
     });
@@ -72,7 +71,6 @@ describe('naturalLanguage()', () => {
         );
         e.message.should.containEql('Smart Replies');
         firebase.naturalLanguage()._nativeModule.getSuggestedReplies = method;
-        Object.freeze(firebase.naturalLanguage()._nativeModule);
         return Promise.resolve();
       }
     });

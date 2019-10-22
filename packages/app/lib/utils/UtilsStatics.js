@@ -71,8 +71,6 @@ function processPathConstants(nativeModule) {
     path[deprecatedFileTypeName] = path[pathFileType];
   }
 
-  Object.freeze(path);
-
   return path;
 }
 

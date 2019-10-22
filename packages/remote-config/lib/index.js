@@ -72,11 +72,9 @@ function convertNativeConfigValues(configValues) {
 
     convertedValue.value = value;
     convertedValue.source = source;
-    Object.freeze(convertedValue);
     convertedValues[key] = convertedValue;
   }
 
-  Object.freeze(convertedValues);
   return convertedValues;
 }
 
